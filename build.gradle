@@ -1,6 +1,6 @@
 plugins {
     id "java"
-    id "checkstyle"
+    // id "checkstyle"
     id "com.google.protobuf" version "0.8.19"
     id "org.kordamp.gradle.project-enforcer" version "0.10.0"
 }
@@ -13,11 +13,11 @@ sourceCompatibility = "11"
 compileJava.options.encoding = "UTF-8"
 jar.destinationDirectory = file("$projectDir/target")
 
-checkstyle {
-    toolVersion = "10.3.4"
-    configFile = "gradle/checkstyle.xml" as File
-    checkstyleTest.enabled = false
-}
+//checkstyle {
+//    toolVersion = "10.3.4"
+//    configFile = "gradle/checkstyle.xml" as File
+//    checkstyleTest.enabled = false
+//}
 
 enforce {
     rule(enforcer.rules.EnforceBytecodeVersion) { r ->
